@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pediatric Ortho Repository - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-tertiary-container": "#818486",
+                    "on-secondary-fixed-variant": "#005048",
+                    "surface-variant": "#d3e4fe",
+                    "primary-fixed": "#dae2fd",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed": "#e0e3e5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed": "#00201c",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#006f64",
+                    "tertiary": "#000000",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#6df5e1",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "inverse-surface": "#213145",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#006b5f",
+                    "secondary-fixed": "#71f8e4",
+                    "outline": "#76777d",
+                    "primary-container": "#131b2e",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#4fdbc8",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "sm": "16px",
+                    "base": "4px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "data-tabular": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "data-tabular": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="flex flex-col h-screen w-64 border-r border-slate-200 bg-slate-50 p-4 gap-2 sticky top-0">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-black text-slate-900 tracking-tight">Medical Archive</h1>
+<p class="text-xs font-medium text-slate-500 uppercase tracking-widest">Dr. Ortho Pediatric</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-white text-secondary font-semibold shadow-sm border border-slate-200 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-sans text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-sans text-sm font-medium">Interventi</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="exit_to_app">exit_to_app</span>
+<span class="font-sans text-sm font-medium">Dimissioni</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-sans text-sm font-medium">Ambulatorio</span>
+</a>
+</nav>
+<button class="mb-4 bg-primary text-on-primary py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 font-semibold text-sm transition-all hover:opacity-90">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+            New Template
+        </button>
+<div class="border-t border-slate-200 pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-sans text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-sans text-sm font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50 bg-white border-b border-slate-200">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg" data-icon="search">search</span>
+<input class="w-full bg-slate-50 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Search medical templates (CMD+K)" type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 border border-slate-200 rounded px-1.5 py-0.5 text-[10px] font-bold text-slate-400 bg-white">⌘K</div>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-6">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-1"></div>
+<button class="flex items-center gap-2 pl-2 pr-1 py-1 hover:bg-slate-50 rounded-full transition-colors">
+<span class="text-xs font-bold text-slate-700">Dr. Sartori</span>
+<span class="material-symbols-outlined text-slate-400" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Page Canvas -->
+<div class="p-lg max-w-container-max mx-auto w-full">
+<header class="mb-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-secondary/10 text-secondary px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Repository</span>
+<span class="text-slate-300">•</span>
+<span class="text-slate-400 font-label-caps uppercase">v2.4.0</span>
+</div>
+<h2 class="font-h1 text-h1 text-on-surface">Template Dashboard</h2>
+<p class="text-on-tertiary-container mt-2 max-w-2xl">Access clinical protocols and standardized documentation for pediatric orthopedic procedures and outpatient clinics.</p>
+</header>
+<!-- Main Sections Grid (Asymmetric Bento-style) -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Interventi Section -->
+<div class="col-span-12 lg:col-span-8 bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md">
+<div class="p-md flex justify-between items-start border-b border-slate-100">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<div class="bg-slate-900 text-white p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<h3 class="font-h3 text-h3">Interventi</h3>
+</div>
+<p class="text-body-sm text-on-tertiary-container">Surgical procedure protocols and standardized operative notes.</p>
+</div>
+<button class="text-secondary font-label-caps hover:underline">VIEW ALL</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2">
+<a class="p-md border-r border-slate-100 hover:bg-slate-50 transition-colors flex items-center gap-4" href="#">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="footprint">footprint</span>
+</div>
+<div>
+<span class="font-h3 text-body-lg block">Foot</span>
+<span class="text-xs text-on-tertiary-container">12 Templates • Clubfoot, Flatfoot</span>
+</div>
+</a>
+<a class="p-md hover:bg-slate-50 transition-colors flex items-center gap-4" href="#">
+<div class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="line_curve">line_curve</span>
+</div>
+<div>
+<span class="font-h3 text-body-lg block">Spine</span>
+<span class="text-xs text-on-tertiary-container">8 Templates • Scoliosis, Kyphosis</span>
+</div>
+</a>
+</div>
+</div>
+<!-- Recent Activity/Stats (Bento Side) -->
+<div class="col-span-12 lg:col-span-4 bg-primary text-on-primary rounded-xl p-md flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-label-caps opacity-60 uppercase">System Status</span>
+<div class="mt-4 flex items-center gap-4">
+<div class="text-4xl font-black">98%</div>
+<div class="text-xs opacity-80">Documentation completion rate this month.</div>
+</div>
+</div>
+<div class="mt-xl">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold">Latest Update</span>
+<span class="text-[10px] opacity-60">2h ago</span>
+</div>
+<div class="bg-white/10 rounded-lg p-3 text-sm">
+                            Spine fusion protocol updated to v4.2
+                        </div>
+</div>
+</div>
+<!-- Dimissioni Section -->
+<div class="col-span-12 md:col-span-6 bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-secondary/30 transition-all duration-300 shadow-sm">
+<div class="p-md bg-surface-container-low/50 border-b border-slate-100 flex items-center gap-3">
+<div class="bg-secondary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="exit_to_app">exit_to_app</span>
+</div>
+<div>
+<h3 class="font-h3 text-body-lg">Dimissioni</h3>
+<span class="text-[10px] text-on-tertiary-container uppercase font-bold tracking-widest">Discharge Letters</span>
+</div>
+</div>
+<div class="divide-y divide-slate-100">
+<a class="p-sm px-md flex justify-between items-center hover:bg-slate-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400" data-icon="description">description</span>
+<span class="text-body-md font-medium">Foot Procedures</span>
+</div>
+<span class="material-symbols-outlined text-slate-300" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-sm px-md flex justify-between items-center hover:bg-slate-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400" data-icon="description">description</span>
+<span class="text-body-md font-medium">Spine Procedures</span>
+</div>
+<span class="material-symbols-outlined text-slate-300" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Ambulatorio Section -->
+<div class="col-span-12 md:col-span-6 bg-white border border-slate-200 rounded-xl overflow-hidden group hover:border-secondary/30 transition-all duration-300 shadow-sm flex flex-col">
+<div class="p-md flex-1">
+<div class="flex items-center gap-3 mb-4">
+<div class="bg-slate-100 text-slate-600 p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<h3 class="font-h3 text-body-lg">Ambulatorio</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high text-on-surface-variant px-2.5 py-1 rounded-full text-xs font-semibold">General Visit</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2.5 py-1 rounded-full text-xs font-semibold">Post-Op Review</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2.5 py-1 rounded-full text-xs font-semibold">Triage</span>
+<span class="bg-surface-container-high text-on-surface-variant px-2.5 py-1 rounded-full text-xs font-semibold">+4 more</span>
+</div>
+</div>
+<a class="bg-slate-50 p-sm text-center text-xs font-bold text-slate-600 hover:text-secondary transition-colors border-t border-slate-100" href="#">
+                        OPEN CLINIC PORTAL
+                    </a>
+</div>
+</div>
+<!-- Contextual Quick Action Grid -->
+<section class="mt-xl">
+<h4 class="font-label-caps text-on-tertiary-container mb-md uppercase">Frequently Used</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-sm">
+<div class="bg-white border border-slate-100 p-sm rounded-lg hover:shadow-sm transition-all cursor-pointer">
+<div class="text-[10px] font-bold text-slate-400 mb-1">DOC_01</div>
+<div class="text-sm font-semibold truncate">Anamnesi Pediatrica</div>
+</div>
+<div class="bg-white border border-slate-100 p-sm rounded-lg hover:shadow-sm transition-all cursor-pointer">
+<div class="text-[10px] font-bold text-slate-400 mb-1">DOC_05</div>
+<div class="text-sm font-semibold truncate">Consenso Informato</div>
+</div>
+<div class="bg-white border border-slate-100 p-sm rounded-lg hover:shadow-sm transition-all cursor-pointer">
+<div class="text-[10px] font-bold text-slate-400 mb-1">DOC_09</div>
+<div class="text-sm font-semibold truncate">Valutazione Scoliosi</div>
+</div>
+<div class="bg-white border border-slate-100 p-sm rounded-lg hover:shadow-sm transition-all cursor-pointer">
+<div class="text-[10px] font-bold text-slate-400 mb-1">DOC_14</div>
+<div class="text-sm font-semibold truncate">Protocollo Gesso</div>
+</div>
+<div class="bg-white border border-slate-100 p-sm rounded-lg hover:shadow-sm transition-all cursor-pointer hidden lg:block">
+<div class="text-[10px] font-bold text-slate-400 mb-1">DOC_22</div>
+<div class="text-sm font-semibold truncate">Follow-up 6m</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="mt-auto px-lg py-sm border-t border-slate-200 bg-white flex justify-between items-center text-[10px] font-bold text-slate-400">
+<div>© 2024 PEDIATRIC ORTHO REPOSITORY SYSTEM</div>
+<div class="flex gap-4 uppercase">
+<a class="hover:text-slate-600" href="#">Privacy Policy</a>
+<a class="hover:text-slate-600" href="#">Terms of Service</a>
+<span class="text-slate-200">|</span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> SYSTEM ONLINE</span>
+</div>
+</footer>
+</main>
+</body></html>

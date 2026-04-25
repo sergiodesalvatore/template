@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-tertiary-container": "#818486",
+                    "on-secondary-fixed-variant": "#005048",
+                    "surface-variant": "#d3e4fe",
+                    "primary-fixed": "#dae2fd",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "surface-container-high": "#dce9ff",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed": "#e0e3e5",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-low": "#eff4ff",
+                    "error": "#ba1a1a",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed": "#00201c",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#006f64",
+                    "tertiary": "#000000",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#6df5e1",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "inverse-surface": "#213145",
+                    "surface-dim": "#cbdbf5",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "secondary": "#006b5f",
+                    "secondary-fixed": "#71f8e4",
+                    "outline": "#76777d",
+                    "primary-container": "#131b2e",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#4fdbc8",
+                    "tertiary-container": "#191c1e",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "xl": "64px",
+                    "xs": "8px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "sm": "16px",
+                    "base": "4px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "data-tabular": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "data-tabular": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .cloud-shadow {
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar from JSON -->
+<header class="flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 font-sans text-sm tracking-tight transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-6">
+<span class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">Pediatric Ortho Repository</span>
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-12 py-2 bg-slate-50 border border-slate-200 rounded-lg w-64 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="Cerca template..." type="text"/>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-slate-400 border border-slate-300 px-1 rounded">⌘K</span>
+</div>
+</div>
+<nav class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors"><span class="material-symbols-outlined">help_outline</span></button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors"><span class="material-symbols-outlined">account_circle</span></button>
+</nav>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar from JSON -->
+<aside class="hidden md:flex flex-col h-full w-64 p-4 gap-2 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 font-sans text-sm font-medium">
+<div class="mb-6 px-2">
+<h2 class="text-xl font-black text-slate-900 dark:text-white">Medical Archive</h2>
+<p class="text-xs text-slate-500">Dr. Ortho Pediatric</p>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 bg-white dark:bg-slate-900 text-teal-600 dark:text-teal-400 shadow-sm border border-slate-200 dark:border-slate-800 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">medical_services</span>
+<span>Interventi</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">exit_to_app</span>
+<span>Dimissioni</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">monitor_heart</span>
+<span>Ambulatorio</span>
+</a>
+</div>
+<button class="mt-4 mb-8 mx-2 bg-primary text-on-primary py-2 rounded shadow-sm hover:opacity-90 transition-opacity font-bold">
+                New Template
+            </button>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span>Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-gutter lg:p-lg bg-surface">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-sm text-on-tertiary-container font-label-caps uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Interventi</span>
+</nav>
+<header class="mb-xl flex justify-between items-end">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">Archivio Interventi</h1>
+<p class="text-on-surface-variant font-body-md mt-base max-w-2xl">Gestisci e utilizza i modelli predefiniti per i verbali operatori pediatrici. Ogni template è validato secondo le linee guida cliniche attuali.</p>
+</div>
+<div class="flex gap-sm">
+<button class="flex items-center gap-xs px-md h-[40px] border border-outline text-on-surface hover:bg-surface-container transition-colors rounded">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+<span class="font-label-caps">Filtra</span>
+</button>
+<button class="flex items-center gap-xs px-md h-[40px] bg-secondary text-on-secondary hover:opacity-90 transition-opacity rounded">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-label-caps">Nuovo Modello</span>
+</button>
+</div>
+</header>
+<!-- Template Grid (Bento Style) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Main Featured Item -->
+<article class="xl:col-span-8 bg-surface-container-lowest border border-outline-variant p-md flex flex-col justify-between group hover:border-secondary transition-colors cloud-shadow">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="bg-secondary-container text-on-secondary-container font-label-caps px-xs py-[2px] rounded-full mb-xs inline-block">Ortopedia Generale</span>
+<h3 class="font-h3 text-h3 text-on-surface mt-base">Correzione Chirurgica Piedi Piatti</h3>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">article</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-md line-clamp-3">
+                        Procedura dettagliata per il trattamento del piattismo valgo evolutivo nell'età pediatrica. Include sezioni per calcaneo-stop, endortesi senotarsica e note post-operatorie specifiche per il monitoraggio della crescita ossea.
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-md">
+<div class="flex gap-md">
+<div class="flex flex-col">
+<span class="font-label-caps text-on-tertiary-container uppercase">Ultimo Utilizzo</span>
+<span class="font-data-tabular text-on-surface">14 Ott 2023</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-on-tertiary-container uppercase">Versione</span>
+<span class="font-data-tabular text-on-surface">v2.4</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-xl py-sm font-label-caps hover:bg-opacity-80 transition-all">
+                            USA TEMPLATE
+                        </button>
+</div>
+</article>
+<!-- Asymmetric List Side -->
+<div class="xl:col-span-4 flex flex-col gap-gutter">
+<!-- Template Card -->
+<article class="bg-surface-container-lowest border border-outline-variant p-md hover:border-secondary transition-colors cloud-shadow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h3 text-[18px] text-on-surface">Trattamento Scoliosi</h3>
+<span class="material-symbols-outlined text-outline">skeleton</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mb-sm line-clamp-2">
+                            Stabilizzazione vertebrale e correzione deformità idiopatiche.
+                        </p>
+<button class="w-full border border-secondary text-secondary font-label-caps py-sm hover:bg-secondary-container transition-colors">
+                            USA TEMPLATE
+                        </button>
+</article>
+<!-- Template Card -->
+<article class="bg-surface-container-lowest border border-outline-variant p-md hover:border-secondary transition-colors cloud-shadow">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h3 text-[18px] text-on-surface">Osteotomia di Bacino</h3>
+<span class="material-symbols-outlined text-outline">medication</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mb-sm line-clamp-2">
+                            Modello per la correzione della displasia dell'anca nel bambino.
+                        </p>
+<button class="w-full border border-secondary text-secondary font-label-caps py-sm hover:bg-secondary-container transition-colors">
+                            USA TEMPLATE
+                        </button>
+</article>
+</div>
+<!-- Secondary Row -->
+<div class="xl:col-span-4 bg-surface-container-lowest border border-outline-variant p-md hover:border-secondary transition-colors cloud-shadow">
+<h3 class="font-h3 text-[18px] text-on-surface mb-xs">Allungamento Arti</h3>
+<p class="text-on-surface-variant text-body-sm mb-sm">Template per fissatori esterni e chiodi endomidollari allungabili.</p>
+<button class="w-full border border-secondary text-secondary font-label-caps py-sm hover:bg-secondary-container transition-colors">
+                        USA TEMPLATE
+                    </button>
+</div>
+<div class="xl:col-span-4 bg-surface-container-lowest border border-outline-variant p-md hover:border-secondary transition-colors cloud-shadow">
+<h3 class="font-h3 text-[18px] text-on-surface mb-xs">Fratture Sovracondiloidee</h3>
+<p class="text-on-surface-variant text-body-sm mb-sm">Riduzione e sintesi con fili di Kirschner sotto guida fluoroscopica.</p>
+<button class="w-full border border-secondary text-secondary font-label-caps py-sm hover:bg-secondary-container transition-colors">
+                        USA TEMPLATE
+                    </button>
+</div>
+<div class="xl:col-span-4 bg-surface-container-lowest border border-outline-variant p-md hover:border-secondary transition-colors cloud-shadow">
+<h3 class="font-h3 text-[18px] text-on-surface mb-xs">Epifisiodesi Temporanea</h3>
+<p class="text-on-surface-variant text-body-sm mb-sm">Correzione della crescita guidata con placche a otto o viti dedicate.</p>
+<button class="w-full border border-secondary text-secondary font-label-caps py-sm hover:bg-secondary-container transition-colors">
+                        USA TEMPLATE
+                    </button>
+</div>
+</div>
+<!-- Empty State / Suggestion Section -->
+<section class="mt-xl p-lg border-2 border-dashed border-outline-variant rounded flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-outline-variant text-[48px] mb-sm">clinical_notes</span>
+<h4 class="font-h3 text-[20px] text-on-surface">Non trovi il modello che cerchi?</h4>
+<p class="text-on-surface-variant font-body-md mb-md max-w-md">Puoi richiedere la creazione di un nuovo template al dipartimento IT o creare una bozza personale.</p>
+<div class="flex gap-sm">
+<button class="px-md py-sm font-label-caps text-on-surface-variant hover:text-primary transition-colors">RICHIESTA NUOVO</button>
+<button class="px-md py-sm bg-primary text-on-primary font-label-caps">CREA BOZZA</button>
+</div>
+</section>
+</main>
+</div>
+<!-- Mobile Navigation Shell Placeholder -->
+<div class="md:hidden sticky bottom-0 w-full bg-white border-t border-slate-200 h-16 flex items-center justify-around z-50">
+<button class="flex flex-col items-center text-slate-400 gap-1">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px]">Dashboard</span>
+</button>
+<button class="flex flex-col items-center text-teal-600 gap-1">
+<span class="material-symbols-outlined">medical_services</span>
+<span class="text-[10px]">Interventi</span>
+</button>
+<button class="flex flex-col items-center text-slate-400 gap-1">
+<span class="material-symbols-outlined">add_box</span>
+<span class="text-[10px]">Nuovo</span>
+</button>
+<button class="flex flex-col items-center text-slate-400 gap-1">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px]">Profilo</span>
+</button>
+</div>
+</body></html>

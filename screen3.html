@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#565e74",
+                        "on-tertiary-container": "#818486",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container-high": "#dce9ff",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary-fixed": "#e0e3e5",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-low": "#eff4ff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#0b1c30",
+                        "on-secondary-fixed": "#00201c",
+                        "on-background": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#006f64",
+                        "tertiary": "#000000",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#6df5e1",
+                        "on-primary-container": "#7c839b",
+                        "primary": "#000000",
+                        "outline-variant": "#c6c6cd",
+                        "on-surface-variant": "#45464d",
+                        "inverse-surface": "#213145",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "secondary": "#006b5f",
+                        "secondary-fixed": "#71f8e4",
+                        "outline": "#76777d",
+                        "primary-container": "#131b2e",
+                        "inverse-primary": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "tertiary-container": "#191c1e",
+                        "on-primary-fixed-variant": "#3f465c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "xl": "64px",
+                        "xs": "8px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "data-tabular": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "data-tabular": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 font-sans text-sm tracking-tight flat no shadows">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">Pediatric Ortho Repository</span>
+</div>
+<div class="flex-1 max-w-md mx-8">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary/50 text-body-sm" placeholder="Cerca template..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors duration-200 ease-in-out">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full w-64 bg-slate-50 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800 p-4 gap-2">
+<div class="mb-6 px-2">
+<h2 class="text-xl font-black text-slate-900 dark:text-white">Medical Archive</h2>
+<p class="text-xs text-slate-500">Dr. Ortho Pediatric</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-sans text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-white dark:bg-slate-900 text-teal-600 dark:text-teal-400 shadow-sm border border-slate-200 dark:border-slate-800 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-sans text-sm font-medium">Interventi</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="exit_to_app">exit_to_app</span>
+<span class="font-sans text-sm font-medium">Dimissioni</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-sans text-sm font-medium">Ambulatorio</span>
+</a>
+</nav>
+<div class="mt-8">
+<button class="w-full bg-primary text-white py-2.5 rounded-lg font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm">add</span>
+                    New Template
+                </button>
+</div>
+<div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-sans text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-sans text-sm font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-gutter lg:p-lg">
+<div class="max-w-container-max mx-auto">
+<!-- Header Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mb-xl">
+<div class="space-y-base">
+<div class="flex items-center gap-xs">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded-full text-label-caps uppercase">Intervento</span>
+<span class="text-on-tertiary-container text-label-caps">ID: ORTHO-042-PI</span>
+</div>
+<h1 class="font-h1 text-h1 text-primary">Piedi Piatti - Intervento</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Template standard per il trattamento chirurgico del piattismo infantile tramite endortesi sinusale.</p>
+</div>
+<div class="flex flex-wrap gap-sm">
+<button class="flex items-center gap-xs px-sm h-[40px] bg-white border border-outline-variant text-primary rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+<span class="font-body-sm text-body-sm">Modifica</span>
+</button>
+<button class="flex items-center gap-xs px-sm h-[40px] bg-white border border-outline-variant text-secondary rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-body-sm text-body-sm">Scarica PDF</span>
+</button>
+<button class="flex items-center gap-xs px-md h-[40px] bg-primary text-on-primary rounded hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+<span class="font-body-sm text-body-sm">Copia Testo</span>
+</button>
+</div>
+</div>
+<!-- Document Layout: Asymmetric Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Text Area (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="bg-surface-container-low px-md py-sm border-b border-outline-variant flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase">Corpo del Documento</span>
+<div class="flex gap-xs">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<div class="p-xl min-h-[600px] font-body-md text-body-md leading-relaxed text-on-surface whitespace-pre-line">
+<div class="mb-lg pb-sm border-b border-outline-variant">
+<h3 class="font-h3 text-h3 mb-xs text-primary">RELAZIONE CHIRURGICA</h3>
+<p class="text-on-surface-variant font-data-tabular">Data: [DATA_INTERVENTO]</p>
+</div>
+<strong class="text-primary block mb-xs">DESCRIZIONE PROCEDURA:</strong>
+                                Paziente in posizione supina. Previa anestesia locale/sedazione e accurata disinfezione del campo operatorio. Si procede ad incisione cutanea di circa 1.5 cm in corrispondenza del seno del tarso. 
+                                
+                                Si espone lo spazio sinusale e si inserisce guida metallica. Sotto controllo scopico si verifica il corretto posizionamento. Si procede all'inserimento di endortesi tipo [MODELLO_PROTESI] di misura [TAGLIA]. 
+                                
+                                Si verifica clinicamente la correzione della volta plantare e la stabilità dell'impianto. Lavaggio abbondante. Emostasi accurata. Sutura dei piani anatomici con filo riassorbibile e cute con punti intradermici.
+                                
+                                <strong class="text-primary block mt-md mb-xs">PRESCRIZIONI POST-OPERATORIE:</strong>
+                                - Deambulazione con carico sfiorante per le prime 48 ore.
+                                - Utilizzo di calzature tipo sneaker con suola rigida.
+                                - Riposo con arto elevato se gonfiore.
+                                - Terapia antalgica: Paracetamolo al bisogno (max 3 volte/die).
+                                - Rimozione punti di sutura (se non riassorbibili) a 12-14 giorni.
+                                
+                                <strong class="text-primary block mt-md mb-xs">FOLLOW-UP:</strong>
+                                Controllo clinico e radiografico a 30 giorni dall'intervento. Evitare attività sportiva d'impatto per almeno 60 giorni.
+
+                                <div class="mt-xl pt-lg border-t border-outline-variant text-right">
+<p class="italic text-on-surface-variant">Firma del Medico Operatore</p>
+<p class="font-bold text-primary">Dr. Ortho Pediatric Team</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Metadata (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Details Card -->
+<div class="bg-white border border-outline-variant rounded-xl p-md space-y-md">
+<h4 class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase">Dettagli Template</h4>
+<div class="space-y-sm">
+<div class="flex justify-between items-center py-xs border-b border-surface-container">
+<span class="text-body-sm text-on-surface-variant">Autore</span>
+<span class="text-body-sm font-semibold text-primary">Dr. Bianchi</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-surface-container">
+<span class="text-body-sm text-on-surface-variant">Ultima Modifica</span>
+<span class="text-body-sm font-semibold text-primary">12 Mag 2024</span>
+</div>
+<div class="flex justify-between items-center py-xs border-b border-surface-container">
+<span class="text-body-sm text-on-surface-variant">Utilizzi Totali</span>
+<span class="text-body-sm font-semibold text-primary">148</span>
+</div>
+<div class="flex justify-between items-center py-xs">
+<span class="text-body-sm text-on-surface-variant">Categoria</span>
+<span class="text-body-sm font-semibold text-secondary">Chirurgia Piede</span>
+</div>
+</div>
+</div>
+<!-- Variables Quick Fill -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl p-md space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary">variables</span>
+<h4 class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase">Variabili Rapide</h4>
+</div>
+<div class="space-y-sm">
+<div>
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase mb-base">Modello Protesi</label>
+<input class="w-full px-sm py-xs border border-outline-variant rounded bg-white text-body-sm" placeholder="Es. Kalix II" type="text"/>
+</div>
+<div>
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase mb-base">Taglia</label>
+<select class="w-full px-sm py-xs border border-outline-variant rounded bg-white text-body-sm">
+<option>Misura 8</option>
+<option>Misura 9</option>
+<option>Misura 10</option>
+</select>
+</div>
+<button class="w-full py-xs bg-secondary-container text-on-secondary-container rounded font-bold text-label-caps uppercase hover:brightness-95 transition-all">
+                                    Aggiorna Testo
+                                </button>
+</div>
+</div>
+<!-- Medical Reference Image -->
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] border border-outline-variant">
+<img alt="Medical visualization" class="object-cover w-full h-full" data-alt="Close-up of a high-tech medical radiological scan showing human foot anatomy with focus on the tarsal bones in blue and teal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDAkw7l7EZUYgVXQBQLaxGyQ-IgdmKzKl5-0MstT-oLyE27GWlpR3e3eZ-ghh8_7bBmI2cVOfX8NDp4zAjJhmUqgGo5ea8f1wyirdYl1hZY9DzAsSz6iIxysXRpkMg9DOpwzlKqMgELPR5RrwDnA_9bcrVNSbYpS6ZTlp1Zb9YsJ27HF41-yHVAatlzas-E6rWEJ_qPyCcsAjPy5ATTbdSScSI5cNoBCAfrZEc_kJ9ne7MoZVqSXE_H5RlsVpFGnb2Reg7WKS-Ga54"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-md">
+<p class="text-white text-body-sm font-medium">Schema Anatomico Seno del Tarso</p>
+</div>
+</div>
+<!-- Related Templates -->
+<div class="space-y-sm">
+<h4 class="font-label-caps text-label-caps text-on-tertiary-fixed-variant uppercase">Template Correlati</h4>
+<a class="flex items-center p-sm bg-white border border-outline-variant rounded hover:border-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary mr-sm">description</span>
+<span class="text-body-sm font-medium">Dimissione Piedi Piatti</span>
+<span class="material-symbols-outlined text-[16px] ml-auto">chevron_right</span>
+</a>
+<a class="flex items-center p-sm bg-white border border-outline-variant rounded hover:border-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary mr-sm">description</span>
+<span class="text-body-sm font-medium">Prescrizione Plantari</span>
+<span class="material-symbols-outlined text-[16px] ml-auto">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
