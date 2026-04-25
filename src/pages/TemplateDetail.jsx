@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { templates } from '../data/templates';
 
@@ -17,7 +17,10 @@ const getRelatedTemplates = (templateId) => {
     'ORTHO-102-DS': ['ORTHO-015-SC'], 
     'ORTHO-103-DM': ['ORTHO-042-PI'],
     'ORTHO-104-DB': ['ORTHO-042-PI'],
-    'ORTHO-105-EQ': ['ORTHO-025-EQ']
+    'ORTHO-105-EQ': ['ORTHO-025-EQ'],
+
+    // Pronto Soccorso -> Related if any (example)
+    'PS-300-RG': ['PS-301-FP', 'PS-302-FG'] 
   };
   
   const ids = relations[templateId] || [];
@@ -36,6 +39,15 @@ const TemplateDetail = () => {
   const [editableContent, setEditableContent] = useState(template.content || '');
   const [copied, setCopied] = useState(false);
 
+  // CRITICAL: Sync state when the URL parameter 'id' changes
+  useEffect(() => {
+    setEditableContent(template.content || '');
+    setIsEditing(false);
+    setCopied(false);
+    // Scroll to top when template changes
+    window.scrollTo(0, 0);
+  }, [id, template.content]);
+
   const relatedTemplates = getRelatedTemplates(template.id);
 
   const handleCopyText = () => {
@@ -46,8 +58,6 @@ const TemplateDetail = () => {
   };
 
   const handleSave = () => {
-    // In a real app, this would save to a database.
-    // For now, we just update the local state.
     setIsEditing(false);
     alert('Modifiche salvate localmente (non persistenti al refresh)');
   };
@@ -164,6 +174,20 @@ const TemplateDetail = () => {
             </div>
           )}
 
+          {/* Minimal Info */}
+          <div className="bg-white border border-outline-variant rounded-2xl p-md">
+            <h4 className="font-label-caps text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-md border-b pb-2">Metadati</h4>
+            <div className="space-y-4">
+              <div className="flex flex-col">
+                <span className="text-[10px] text-slate-400 uppercase font-bold mb-1">Autore</span>
+                <span className="text-sm font-semibold text-slate-700">{template.author}</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] text-slate-400 uppercase font-bold mb-1">Ultima Modifica</span>
+                <span className="text-sm font-semibold text-slate-700">{template.lastUsed}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
