@@ -144,6 +144,35 @@ const TemplateDetail = () => {
 
         {/* Sidebar */}
         <div className="lg:col-span-4 flex flex-col gap-gutter">
+          {/* External Quick Links (e.g. OneDrive downloads) */}
+          {template.links && template.links.length > 0 && (
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-md space-y-md shadow-sm">
+              <div className="flex items-center gap-2 text-amber-700">
+                <span className="material-symbols-outlined text-[20px]">download</span>
+                <h4 className="font-bold text-sm uppercase tracking-tight">Documenti da Scaricare</h4>
+              </div>
+              <div className="space-y-sm">
+                {template.links.map((link, idx) => (
+                  <a 
+                    key={idx}
+                    href={link.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center p-md bg-white border border-amber-100 rounded-xl hover:border-amber-400 hover:shadow-md transition-all group"
+                  >
+                    <div className="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:scale-110 transition-transform mr-md">
+                      <span className="material-symbols-outlined">{link.icon || 'description'}</span>
+                    </div>
+                    <div className="flex flex-col flex-1">
+                      <span className="text-sm font-bold text-slate-700 group-hover:text-primary transition-colors">{link.title}</span>
+                      <span className="text-[10px] text-amber-600 font-medium">Download esterno</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Related Documents Link */}
           {relatedTemplates.length > 0 ? (
             <div className="bg-secondary-container/30 border border-secondary/20 rounded-2xl p-md space-y-md">

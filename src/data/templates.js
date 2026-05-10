@@ -669,19 +669,49 @@ Appoggio plantigrado, calcagno in asse, ROM fisiologico in assenza di dolore, no
     author: 'Dr. Ortho Pediatric',
     uses: 0,
     isFeatured: true,
-    content: `APR: Piattismo sintomatico (Selezionare: Bilaterale / DX / SX). Il dolore aumenta dopo l'attività fisica e regredisce con il riposo.
+    links: [
+      { title: 'Scheda Informativa Piede Piatto', url: 'https://1drv.ms/b/c/1463450412a5421e/IQAeQqUSBEVjIIAUdUIAAAAAAZ2sRtYnNg3ltvw8yudprs8?e=UWdZfn', icon: 'picture_as_pdf' }
+    ],
+    content: `APR
+BILAT.    Piattismo sintomatico bilaterale. Il dolore aumenta dopo l'attività fisica e regredisce con il riposo
+DX.       Piattismo sintomatico destro. Il dolore aumenta dopo l'attività fisica e regredisce con il riposo
+SX.       Piattismo sintomatico sinistro. Il dolore aumenta dopo l'attività fisica e regredisce con il riposo
 
-EO - LOCOMOTORE: Piattismo sintomatico di III grado (Selezionare: Bilaterale / DX / SX). No retrazioni del t. d'achille. Non apparenti deficit VN in atto.
+EO:-LOCOMOTORE
+BILAT.    Piattismo sintomatico bilaterale di III grado. No retrazioni del t. d'achille. Non apparenti deficit VN in atto.
+DX.       Piattismo sintomatico destro di III grado. No retrazioni del t. d'achille. Non apparenti deficit VN in atto.
+sX.       Piattismo sintomatico sinistro di III grado. No retrazioni del t. d'achille. Non apparenti deficit VN in atto.
 
-IPOTESI DIAGNOSTICA: Piattismo sintomatico (Selezionare: Bilaterale / DX / SX) di III grado.
+IPOTESI DIAGNOSTICA
+BILAT.    Piattismo sintomatico bilaterale di III grado
+DX.       Piattismo sintomatico destro di III grado
+SX.       Piattismo sintomatico sinistro di III grado
 
-PIANO DI CURA: Correzione piattismo (Selezionare: Bilaterale / DX / SX) di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile.
+PIANO DI CURA
+BILAT.   Correzione piattismo bilaterale di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
+DX.      Correzione piattismo destro di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
+SX.      Correzione piattismo sinistro di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
 
-ALTRO: Si ricovera in reparto. Firmato consenso informato e scheda informativa.
+ALTRO
+    Si ricovera in reparto. Firmato consenso informato e scheda informativa
 
-CONSENSO - PROCEDURA: CORREZIONE PIEDE PIATTO SINTOMATICO (Selezionare: BILATERALE / DESTRO / SINISTRO).
+CONSENSO - PROCEDURA CHIRURGICA
+BILAT.   CORREZIONE PIEDE PIATTO SINTOMATICO BILATERALE
+DX.      CORREZIONE PIEDE PIATTO SINTOMATICO DESTRO
+SX.      CORREZIONE PIEDE PIATTO SINTOMATICO SINISTRO
 
-CONSENSO - INTERVENTO: Correzione piattismo (Selezionare: bilaterale / destro / sinistro) di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile.`
+CONSENSO - DIAGNOSI
+BILAT.   PIEDE PIATTO SINTOMATICO BILATERALE
+DX.      PIEDE PIATTO SINTOMATICO DESTRO
+SX.      PIEDE PIATTO SINTOMATICO SINISTRO
+
+CONSENSO - INTERVENTO
+BILAT.   Correzione piattismo bilaterale di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
+DX.      Correzione piattismo destro di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
+SX.      Correzione piattismo sinistro di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile
+
+ALTRO
+   VEDI SCHEDA INFORMATIVA`
   },
   {
     id: 'PRE-401-SC',
@@ -694,21 +724,39 @@ CONSENSO - INTERVENTO: Correzione piattismo (Selezionare: bilaterale / destro / 
     author: 'Dr. Ortho Pediatric',
     uses: 0,
     isFeatured: true,
-    content: `APR: Paziente affetto da scoliosi idiopatica dell'adolescenza. Ha eseguito rx che conferma la diagnosi. Ha eseguito RMN che esclude malformazioni midollari. Si ricovera per essere sottoposto ad intervento di artrodesi vertebrale per via posteriore.
+    links: [
+      { title: 'Scheda Informativa Scoliosi', url: 'https://1drv.ms/w/c/1463450412a5421e/IQAeQqUSBEVjIIAUc0IAAAAAAWvyNdhvftEX-Kd6uNPuTEQ?e=YupUIW', icon: 'description' },
+      { title: 'Consenso Trasfusioni', url: 'https://1drv.ms/b/c/1463450412a5421e/IQAeQqUSBEVjIIAUdEIAAAAAAf6KteDMW0mylRTWnJ1wQLI?e=GKXrlY', icon: 'picture_as_pdf' }
+    ],
+    content: `APR
+      Paziente affetto da scoliosi idiopatica dell'adolescenza. Ha eseguito rx che conferma la diagnosi. Ha eseguito RMN che esclude malformazioni midollari. Si ricovera per essere sottoposto ad intervento di artrodesi vertebrale per via posteriore.
 
-EO - LOCOMOTORE: Asimmetria dei triangoli della taglia e delle spalle. Scoliosi toracica destra convessa e lombare sinistro convessa con gibbo omolaterale. ROM rachide completo. Riduzione della cifosi toracica. Non apparenti deficit vn agli arti inferiori.
+EO:-LOCOMOTORE
+      Asimmetria dei triangoli della taglia e delle spalle. Scoliosi toracica destra convessa e lombare sinistro convessa con gibbo omolaterale. ROM rachide completo. Riduzione della cifosi toracica. Non apparenti deficit vn agli arti inferiori
 
-IPOTESI DIAGNOSTICA: Scoliosi idiopatica dell'adolescente.
+IPOTESI DIAGNOSTICA
+      Scoliosi idiopatica dell'adolescente
 
-PIANO DI CURA: Correzione scoliosi mediante artrodesi per via posteriore.
+PIANO DI CURA
+      Correzione scoliosi mediante artrodesi per via posteriore
 
-ALTRO: Si ricovera in reparto. Firmato consenso informato, consenso alla terapia trasfusionale e scheda informativa.
+ALTRO
+    Si ricovera in reparto. Firmato consenso informato, consenso alla terapia trasfusionale e scheda informativa
 
-CONSENSO - PROCEDURA: Correzione scoliosi idiopatica dell'adolescente mediante artrodesi per via posteriore.
+CONSENSO - PROCEDURA CHIRURGICA
+Correzione scoliosi idiopatica dell'adolescente mediante artrodesi per via posteriore
 
-CONSENSO - INTERVENTO: Correzione scoliosi idiopatica della'adolescente mediante osteotomie multilivello ed artrodesi per via posteriore.
+CONSENSO - DIAGNOSI
+Scoliosi idiopatica della'adolescente
 
-RISCHI: Paraplegia - paraparesi - disturbi transitori/permanenti degli sfinteri - alterazione transitoria della funzione midollare (stupor) - infezione - mobilizzazione/rottura mezzi di sintesi - pseudoartrosi - cifosi giunzionale - lesioni vascolari.`
+CONSENSO - INTERVENTO
+Correzione scoliosi idiopatica della'adolescente mediante osteotomie multilivello ed artrodesi per via posteriore
+
+RISCHI E COMPLICANZE
+PARAPLEGIA - PARAPARESI - DISTURBI TRANSITORI/PERMANENTI DEGLI SFINTERI - ALTERAZIONE
+TRANSITORIA DELLA FUNZIONE MIDOLLARE (STUPOR) - INFEZIONE - MOBILIZZAZIONE/ROTTURA
+MEZZI DI SINTESI - PSEUDOARTROSI - CIFOSI GIUNZIONALE - LESIONI VASCOLARI  
+ - si allega scheda informativa -`
   },
   {
     id: 'PRE-402-RM',
@@ -721,19 +769,45 @@ RISCHI: Paraplegia - paraparesi - disturbi transitori/permanenti degli sfinteri 
     author: 'Dr. Ortho Pediatric',
     uses: 0,
     isFeatured: false,
-    content: `MOTIVAZIONE RICOVERO: Rimozione mezzi di sintesi.
+    content: `MOTIVAZIONE RICOVERO DH
+   Rimozione mezzi di sintesi piede dx e sx
 
-APR: (Esempio) Frattura sovracondiloidea omero trattata chirurgicamente / Viti endosenotarsiche posizionate precedentemente. Si ricovera per le cure del caso.
+APR
+    Frattura sovracondilodea omero destro trattata chirurgicamente in data 28/07/23. Si ricovera per le cure del caso 
+    Viti endosenotarsiche posizionate a Giugno 2021. Si ricovera per rimuoverle
 
-EO - LOCOMOTORE: Cicatrici normotrofiche normocromiche, non algia alla palpazione, no deficit vn in atto. ROM apparentemente completo.
+EO:-LOCOMOTORE
+    Apparecchio gessato ben tollerato, non apparenti deficit vn in atto. ROM apparentemente completo
+    Cicatrici normotrofiche normocromiche, non algia alla palpazione, no deficit vn in atto
 
-IPOTESI DIAGNOSTICA: Esiti di frattura (Omero / Radio / Altro) / Pregressa artrorisi bilaterale per piattismo.
+IPOTESI DIAGNOSTICA
+SOVRACONDILOIDEA    Esiti di frattura sovracondiloidea omero destro
+RADIO               Esiti di frattura radio sinistro
+PIEDI               Pregressa artrorisi bilaterale per piattismo
 
-PIANO DI CURA: Rimozione mezzi di sintesi (fili di k / viti endosenotarsiche / altro).
+PIANO DI CURA
+SOVRACONDILOIDEA    Rimozione mezzi di sintesi (fili di k) omero destro
+RADIO               Rimozione mezzi di sintesi (fili di k) radio sinistro
+PIEDI               Rimozioni viti endosenotarsiche bilateralmente
 
-CONSENSO - PROCEDURA: Rimozione mezzi di sintesi.
+ALTRO
+    Si ricovera in reparto. Firmato consenso informato
 
-RISCHI: Infezione, deiscenza della ferita chirurgica, rottura e/o mobilizzazione dei mezzi di sintesi, impossibilità a rimuovere parzialmente o completamente i mezzi di sintesi, necessità di ulteriori interventi chirurgici.`
+CONSENSO - PROCEDURA CHIRURGICA
+    Rimozione mezzi di sintesi
+
+CONSENSO - DIAGNOSI
+SOVRACONDILOIDEA        Esiti di frattura sovracondiloidea omero destro
+RADIO                   Esiti di frattura radio sinistro 
+PIEDI                   Pregressa artrorisi bilaterale per piattismo
+
+CONSENSO - INTERVENTO
+SOVRACONDILOIDEA        Rimozione mezzi di sintesi (fili di k) omero destro
+RADIO                   Rimozione mezzi di sintesi (fili di k) radio sinistro
+PIEDI                   Rimozioni viti endosenotarsiche bilateralmente
+
+ALTRO
+    Infezione, deiscenza della ferita chirurgica, rottura e/o mobilizzazione dei mezzi di sintesi, impossibilità a rimuovere parzialmente o completamente i mezzi di sintesi, necessità di ulteriori interventi chirurgici.`
   },
   {
     id: 'PRE-403-PT',
@@ -746,16 +820,36 @@ RISCHI: Infezione, deiscenza della ferita chirurgica, rottura e/o mobilizzazione
     author: 'Dr. Ortho Pediatric',
     uses: 0,
     isFeatured: false,
-    content: `APR: Esiti di PTC trattato conservativamente. Si ricovera per essere sottoposto alle cure del caso.
+    content: `APR
+BILAT.    Esiti di PTC trattato conservativamente. Si ricovera per essere sottoposto alle cure del caso
 
-EO - LOCOMOTORE: Esiti di PTC trattato conservativamente, ROM tibiotarsica 0-90°, atteggiato in pronazione, non apparenti deficit vn in atto, retrazione achillea marcata.
+EO:-LOCOMOTORE
+BILAT.    esiti di PTC trattato conservativamente, ROM tibiotarsica 0-90°, atteggiato in pronazione, non apparenti deficit vn in atto, retrazione achillea marcata
 
-IPOTESI DIAGNOSTICA: Piede torto congenito (Selezionare: Bilaterale / SX).
+IPOTESI DIAGNOSTICA
+BILAT.    Piede torto congenito bilaterale
+SX.       Piede torto congenito sx
 
-PIANO DI CURA: Tenotomia achillea (Selezionare: Bilaterale / SX).
+PIANO DI CURA
+BILAT.   Tenotomia achillea bilaterale
+SX.      Tenotomia achillea sx
 
-CONSENSO - INTERVENTO: Correzione ptc mediante tenotomia achillea e applicazione gessi.
+ALTRO
+    Si ricovera in reparto. Firmato consenso informato
 
-RISCHI: Lesioni vascolari e/o nervose, infezione, deiscenza della ferita chirurgica, recidiva, necessità di ulteriori interventi chirurgici, rottura del gesso.`
+CONSENSO - PROCEDURA CHIRURGICA
+BILAT.   Correzione PTC bilaterale
+SX.      Correzione PTC SX
+
+CONSENSO - DIAGNOSI
+BILAT.   PIEDE TORTO CONGENITO BILATERALE
+SX.      PIEDE TORTO CONGENITO SX
+
+CONSENSO - INTERVENTO
+BILAT.   Correzione ptc bilaterale mediante tenotomia achillea e applicazione gessi
+SX.      Correzione ptc sx mediante tenotomia achillea e applicazione gessi
+
+ALTRO
+   Lesioni vascolari e/o nervose, infezione, deiscenza della ferita chirurgica, recidiva, necessità di ulteriori interventi chirurgici, rottura del gesso`
   }
 ];

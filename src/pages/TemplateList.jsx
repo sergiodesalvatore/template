@@ -16,18 +16,24 @@ const TemplateList = ({ filterCategory }) => {
     if (filterCategory === 'Pronto Soccorso') {
       return templates.filter(t => t.category === 'Pronto Soccorso');
     }
+    if (filterCategory === 'Preospedalizzazione') {
+      return templates.filter(t => t.category === 'Preospedalizzazione');
+    }
     // "Interventi" includes everything except the specific sections above
     return templates.filter(t => 
       t.category !== 'Dimissioni' && 
       t.category !== 'Ambulatorio' && 
-      t.category !== 'Pronto Soccorso'
+      t.category !== 'Pronto Soccorso' &&
+      t.category !== 'Preospedalizzazione'
     );
   }, [filterCategory]);
 
   // Extract unique sub-categories from the filtered templates for the tabs
   const categories = useMemo(() => {
     const cats = new Set(pageTemplates.map(t => t.category));
-    return ['all', ...Array.from(cats)];
+    const catArray = Array.from(cats);
+    if (catArray.length <= 1) return []; // Don't show tabs if there's only one category
+    return ['all', ...catArray];
   }, [pageTemplates]);
 
   // Filter templates based on the active tab
@@ -35,6 +41,12 @@ const TemplateList = ({ filterCategory }) => {
     if (activeTab === 'all') return pageTemplates;
     return pageTemplates.filter(t => t.category === activeTab);
   }, [pageTemplates, activeTab]);
+
+  const downloads = [
+    { title: 'Scheda Informativa Scoliosi', url: 'https://1drv.ms/w/c/1463450412a5421e/IQAeQqUSBEVjIIAUc0IAAAAAAWvyNdhvftEX-Kd6uNPuTEQ?e=YupUIW', icon: 'description' },
+    { title: 'Consenso Trasfusioni', url: 'https://1drv.ms/b/c/1463450412a5421e/IQAeQqUSBEVjIIAUdEIAAAAAAf6KteDMW0mylRTWnJ1wQLI?e=GKXrlY', icon: 'picture_as_pdf' },
+    { title: 'Scheda Informativa Piede Piatto', url: 'https://1drv.ms/b/c/1463450412a5421e/IQAeQqUSBEVjIIAUdUIAAAAAAZ2sRtYnNg3ltvw8yudprs8?e=UWdZfn', icon: 'picture_as_pdf' },
+  ];
 
   return (
     <div className="p-gutter lg:p-lg bg-surface w-full max-w-container-max mx-auto">
@@ -49,7 +61,12 @@ const TemplateList = ({ filterCategory }) => {
         <div>
           <h1 className="font-h1 text-h1 text-on-surface">Archivio {filterCategory || 'Interventi'}</h1>
           <p className="text-on-surface-variant font-body-md mt-base max-w-2xl">
-            Sfoglia i modelli standard per {filterCategory === 'Dimissioni' ? 'le lettere di dimissione' : filterCategory === 'Ambulatorio' ? 'i referti ambulatoriali' : 'i verbali operatori'}.
+            Sfoglia i modelli standard per {
+              filterCategory === 'Dimissioni' ? 'le lettere di dimissione' : 
+              filterCategory === 'Ambulatorio' ? 'i referti ambulatoriali' : 
+              filterCategory === 'Preospedalizzazione' ? 'le cartelle di pre-ricovero' :
+              'i verbali operatori'
+            }.
           </p>
         </div>
         <button 
@@ -61,22 +78,50 @@ const TemplateList = ({ filterCategory }) => {
         </button>
       </header>
 
+      {/* Downloads Section for Preospedalizzazione */}
+      {filterCategory === 'Preospedalizzazione' && (
+        <section className="mb-xl p-lg bg-amber-50 border border-amber-200 rounded-2xl shadow-sm">
+          <div className="flex items-center gap-2 mb-md text-amber-800 font-bold uppercase text-xs tracking-widest">
+            <span className="material-symbols-outlined text-[18px]">download</span>
+            Documenti Informativi e Consensi (Download)
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
+            {downloads.map((doc, i) => (
+              <a 
+                key={i}
+                href={doc.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white border border-amber-100 rounded-xl hover:shadow-md hover:border-amber-400 transition-all group"
+              >
+                <div className="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:scale-110 transition-transform">
+                  <span className="material-symbols-outlined">{doc.icon}</span>
+                </div>
+                <span className="text-sm font-semibold text-slate-700">{doc.title}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Tabs */}
-      <div className="flex gap-4 border-b border-outline-variant mb-xl overflow-x-auto scrollbar-hide">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveTab(category)}
-            className={`pb-sm font-label-caps uppercase transition-colors whitespace-nowrap border-b-2 transition-all duration-200 ${
-              activeTab === category
-                ? 'border-primary text-primary font-bold'
-                : 'border-transparent text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            {category === 'all' ? 'Tutti' : category}
-          </button>
-        ))}
-      </div>
+      {categories.length > 0 && (
+        <div className="flex gap-4 border-b border-outline-variant mb-xl overflow-x-auto scrollbar-hide">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveTab(category)}
+              className={`pb-sm font-label-caps uppercase transition-colors whitespace-nowrap border-b-2 transition-all duration-200 ${
+                activeTab === category
+                  ? 'border-primary text-primary font-bold'
+                  : 'border-transparent text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              {category === 'all' ? 'Tutti' : category}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Uniform Template Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
