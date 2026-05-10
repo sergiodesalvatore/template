@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, Navigate } from 'react-router-dom';
+import { Link, useParams, Navigate, useNavigate } from 'react-router-dom';
 import { templates } from '../data/templates';
 
 // Relationship mapping helper
-const getRelatedTemplates = (templateId) => {
+const getRelatedTemplates = (templateId, currentCategory) => {
   const relations = {
     // Interventi -> Dimissioni
     'ORTHO-042-PI': ['ORTHO-103-DM', 'ORTHO-104-DB'], // Piede Piatto -> Dimissioni
@@ -23,12 +23,22 @@ const getRelatedTemplates = (templateId) => {
     'PS-300-RG': ['PS-301-FP', 'PS-302-FG'] 
   };
   
-  const ids = relations[templateId] || [];
+  let ids = relations[templateId] || [];
+
+  // Special Rule: All Ambulatorio templates (except the prescriptions one itself)
+  // should link to the "Prescrizioni Ambulatoriali" template
+  if (currentCategory === 'Ambulatorio' && templateId !== 'ORTHO-204-AM') {
+    if (!ids.includes('ORTHO-204-AM')) {
+      ids.push('ORTHO-204-AM');
+    }
+  }
+  
   return ids.map(id => templates.find(t => t.id === id)).filter(Boolean);
 };
 
 const TemplateDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const template = templates.find(t => t.id === id);
 
   if (!template) {
@@ -48,7 +58,7 @@ const TemplateDetail = () => {
     window.scrollTo(0, 0);
   }, [id, template.content]);
 
-  const relatedTemplates = getRelatedTemplates(template.id);
+  const relatedTemplates = getRelatedTemplates(template.id, template.category);
 
   const handleCopyText = () => {
     navigator.clipboard.writeText(editableContent).then(() => {
@@ -64,6 +74,17 @@ const TemplateDetail = () => {
 
   return (
     <div className="p-gutter lg:p-lg max-w-container-max mx-auto w-full">
+      {/* Back Button */}
+      <div className="mb-sm">
+        <button 
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-1 text-slate-400 hover:text-primary transition-all text-[11px] font-bold uppercase tracking-wider group"
+        >
+          <span className="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+          Torna Indietro
+        </button>
+      </div>
+
       {/* Header Actions */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-md mb-xl">
         <div className="space-y-base">
