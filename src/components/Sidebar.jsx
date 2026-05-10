@@ -36,6 +36,10 @@ const Sidebar = () => {
           <span className="material-symbols-outlined" data-icon="emergency">emergency</span>
           <span className="font-sans text-sm font-medium">Pronto Soccorso</span>
         </NavLink>
+        <NavLink to="/preospedalizzazione" className={navLinkClass}>
+          <span className="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+          <span className="font-sans text-sm font-medium">Preospedalizzazione</span>
+        </NavLink>
       </nav>
       <button 
         onClick={() => alert('Funzione "Nuovo Modello" in fase di implementazione. Sarà presto disponibile un editor completo.')}

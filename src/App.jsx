@@ -15,6 +15,7 @@ function App() {
           <Route path="dimissioni" element={<TemplateList filterCategory="Dimissioni" />} />
           <Route path="ambulatorio" element={<TemplateList filterCategory="Ambulatorio" />} />
           <Route path="pronto-soccorso" element={<TemplateList filterCategory="Pronto Soccorso" />} />
+          <Route path="preospedalizzazione" element={<TemplateList filterCategory="Preospedalizzazione" />} />
           <Route path="template/:id" element={<TemplateDetail />} />
         </Route>
       </Routes>

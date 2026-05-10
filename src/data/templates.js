@@ -526,5 +526,236 @@ Si prescrive:
 - Evitare attività fisica fino a nuova indicazione 
 - Tachipirina la bisogno
 - Controllo in data 26.09.23 alle ore 8.00 in sala gessi per rimozione stecca e controllo clinico (stanza F1)`
+  },
+  {
+    id: 'ORTHO-106-DP',
+    title: 'Desutura Piede Piatto',
+    category: 'Dimissioni',
+    icon: 'content_cut',
+    description: 'Protocollo per il controllo clinico e la rimozione dei punti di sutura post-intervento di correzione del piede piatto.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Controllo clinico. Medicazione. Desutura. Ferita in ordine. 
+Si prescrive:
+- Deambulare senza l'ausilio dei bastoni canadesi
+- Nuoto ad un mese dall'intervento
+- Astensione dall'attività fisica per 2 mesi
+- Controllo clinico ambulatoriale a 3 mesi dall'intervento`
+  },
+  {
+    id: 'ORTHO-206-DI',
+    title: 'Diagnosi Frequenti',
+    category: 'Ambulatorio',
+    icon: 'clinical_notes',
+    description: 'Elenco delle diagnosi ortopediche pediatriche più comuni per una rapida selezione.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Nella norma per età.
+Piattismo sintomatico.
+M. di Osgood-Schlatter.
+Tallodinia.
+Scoliosi idiopatica dell’adolescenza.
+Atteggiamento scoliotico.
+Displasia congenita dell’anca.
+Piede torto posizionale.`
+  },
+  {
+    id: 'ORTHO-207-CO',
+    title: 'Collaudi Ortesi',
+    category: 'Ambulatorio',
+    icon: 'check_circle',
+    description: 'Verbali di collaudo favorevole per plantari e corsetti.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Collaudo plantari favorevole.
+Collaudo corsetto favorevole.`
+  },
+  {
+    id: 'ORTHO-208-IP',
+    title: 'Indicazione Intervento Piede Piatto',
+    category: 'Ambulatorio',
+    icon: 'add_task',
+    description: 'Template per l\'indicazione chirurgica di artrorisi astragalica e inserimento in lista d\'attesa.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Indicazione ad intervento chirurgico di artrorisi astragalica.
+Si richiedono Rx piedi sotto carico in 2 P + oblique fuori carico.
+Si inserisce in lista d'attesa.`
+  },
+  {
+    id: 'ORTHO-209-TA',
+    title: 'Tallodinia (Trattamento)',
+    category: 'Ambulatorio',
+    icon: 'healing',
+    description: 'Indicazioni per il trattamento della tallodinia con tallonette in silicone.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Tallonette in silicone.
+Astensione dalle attività sportive se sintomatico, riprende se asintomatico.
+Controllo sulla base dell’evoluzione clinica.`
+  },
+  {
+    id: 'ORTHO-210-OS',
+    title: 'M. di Osgood-Schlatter',
+    category: 'Ambulatorio',
+    icon: 'healing',
+    description: 'Trattamento e consigli per la malattia di Osgood-Schlatter.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `M. di Osgood-Schlatter.
+Tutore a fascia per tendine rotuleo.
+Astensione dalle attività sportive se sintomatico, riprende se asintomatico.
+Controllo sulla base dell’evoluzione clinica.`
+  },
+  {
+    id: 'ORTHO-211-IM',
+    title: 'Richiesta Esami Radiografici',
+    category: 'Ambulatorio',
+    icon: 'image',
+    description: 'Elenco standard degli esami radiografici più richiesti in ambito ortopedico pediatrico.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Rx piedi sotto carico in 2 P + oblique fuori carico.
+Rx arti inferiori sotto carico in AP con misurazioni.
+Rx rachide in toto in ortostatismo in 2 P.
+RMN ginocchio.`
+  },
+  {
+    id: 'ORTHO-212-DS',
+    title: 'Dito a Scatto (Tenolisi)',
+    category: 'Ambulatorio',
+    icon: 'back_hand',
+    description: 'Diagnosi e indicazione chirurgica per tenosinovite stenosante (dito a scatto).',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `Flessione irriducibile falange distale I dito mano, non deficit vascolo-nervosi periferici.
+Tenosinovite stenosante I dito mano.
+Indicazione ad intervento di tenolisi.
+Si inserisce in lista d’attesa.
+Appoggio plantigrado, calcagno in asse, ROM fisiologico in assenza di dolore, non tumefazioni, cicatrici in ordine.`
+  },
+  {
+    id: 'PRE-400-PP',
+    title: 'Preospedalizzazione Piede Piatto',
+    category: 'Preospedalizzazione',
+    icon: 'assignment_turned_in',
+    description: 'Cartella clinica di preospedalizzazione per correzione piattismo (Artrorisi).',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: true,
+    content: `APR: Piattismo sintomatico (Selezionare: Bilaterale / DX / SX). Il dolore aumenta dopo l'attività fisica e regredisce con il riposo.
+
+EO - LOCOMOTORE: Piattismo sintomatico di III grado (Selezionare: Bilaterale / DX / SX). No retrazioni del t. d'achille. Non apparenti deficit VN in atto.
+
+IPOTESI DIAGNOSTICA: Piattismo sintomatico (Selezionare: Bilaterale / DX / SX) di III grado.
+
+PIANO DI CURA: Correzione piattismo (Selezionare: Bilaterale / DX / SX) di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile.
+
+ALTRO: Si ricovera in reparto. Firmato consenso informato e scheda informativa.
+
+CONSENSO - PROCEDURA: CORREZIONE PIEDE PIATTO SINTOMATICO (Selezionare: BILATERALE / DESTRO / SINISTRO).
+
+CONSENSO - INTERVENTO: Correzione piattismo (Selezionare: bilaterale / destro / sinistro) di III grado mediante artrorisi con ortesi endosenotarsica non riassorbibile.`
+  },
+  {
+    id: 'PRE-401-SC',
+    title: 'Preospedalizzazione Scoliosi Idiopatica',
+    category: 'Preospedalizzazione',
+    icon: 'assignment_turned_in',
+    description: 'Cartella clinica di preospedalizzazione per intervento di artrodesi vertebrale.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: true,
+    content: `APR: Paziente affetto da scoliosi idiopatica dell'adolescenza. Ha eseguito rx che conferma la diagnosi. Ha eseguito RMN che esclude malformazioni midollari. Si ricovera per essere sottoposto ad intervento di artrodesi vertebrale per via posteriore.
+
+EO - LOCOMOTORE: Asimmetria dei triangoli della taglia e delle spalle. Scoliosi toracica destra convessa e lombare sinistro convessa con gibbo omolaterale. ROM rachide completo. Riduzione della cifosi toracica. Non apparenti deficit vn agli arti inferiori.
+
+IPOTESI DIAGNOSTICA: Scoliosi idiopatica dell'adolescente.
+
+PIANO DI CURA: Correzione scoliosi mediante artrodesi per via posteriore.
+
+ALTRO: Si ricovera in reparto. Firmato consenso informato, consenso alla terapia trasfusionale e scheda informativa.
+
+CONSENSO - PROCEDURA: Correzione scoliosi idiopatica dell'adolescente mediante artrodesi per via posteriore.
+
+CONSENSO - INTERVENTO: Correzione scoliosi idiopatica della'adolescente mediante osteotomie multilivello ed artrodesi per via posteriore.
+
+RISCHI: Paraplegia - paraparesi - disturbi transitori/permanenti degli sfinteri - alterazione transitoria della funzione midollare (stupor) - infezione - mobilizzazione/rottura mezzi di sintesi - pseudoartrosi - cifosi giunzionale - lesioni vascolari.`
+  },
+  {
+    id: 'PRE-402-RM',
+    title: 'Preospedalizzazione Rimozione Mezzi di Sintesi',
+    category: 'Preospedalizzazione',
+    icon: 'assignment_turned_in',
+    description: 'Cartella clinica di preospedalizzazione per rimozione viti, fili di K o altro strumentario.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `MOTIVAZIONE RICOVERO: Rimozione mezzi di sintesi.
+
+APR: (Esempio) Frattura sovracondiloidea omero trattata chirurgicamente / Viti endosenotarsiche posizionate precedentemente. Si ricovera per le cure del caso.
+
+EO - LOCOMOTORE: Cicatrici normotrofiche normocromiche, non algia alla palpazione, no deficit vn in atto. ROM apparentemente completo.
+
+IPOTESI DIAGNOSTICA: Esiti di frattura (Omero / Radio / Altro) / Pregressa artrorisi bilaterale per piattismo.
+
+PIANO DI CURA: Rimozione mezzi di sintesi (fili di k / viti endosenotarsiche / altro).
+
+CONSENSO - PROCEDURA: Rimozione mezzi di sintesi.
+
+RISCHI: Infezione, deiscenza della ferita chirurgica, rottura e/o mobilizzazione dei mezzi di sintesi, impossibilità a rimuovere parzialmente o completamente i mezzi di sintesi, necessità di ulteriori interventi chirurgici.`
+  },
+  {
+    id: 'PRE-403-PT',
+    title: 'Preospedalizzazione Piede Torto Congenito',
+    category: 'Preospedalizzazione',
+    icon: 'assignment_turned_in',
+    description: 'Cartella clinica di preospedalizzazione per tenotomia achillea in esiti di PTC.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dr. Ortho Pediatric',
+    uses: 0,
+    isFeatured: false,
+    content: `APR: Esiti di PTC trattato conservativamente. Si ricovera per essere sottoposto alle cure del caso.
+
+EO - LOCOMOTORE: Esiti di PTC trattato conservativamente, ROM tibiotarsica 0-90°, atteggiato in pronazione, non apparenti deficit vn in atto, retrazione achillea marcata.
+
+IPOTESI DIAGNOSTICA: Piede torto congenito (Selezionare: Bilaterale / SX).
+
+PIANO DI CURA: Tenotomia achillea (Selezionare: Bilaterale / SX).
+
+CONSENSO - INTERVENTO: Correzione ptc mediante tenotomia achillea e applicazione gessi.
+
+RISCHI: Lesioni vascolari e/o nervose, infezione, deiscenza della ferita chirurgica, recidiva, necessità di ulteriori interventi chirurgici, rottura del gesso.`
   }
 ];

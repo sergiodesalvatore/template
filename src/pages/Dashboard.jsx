@@ -16,7 +16,7 @@ const Dashboard = () => {
       </header>
 
       {/* Main Sections Navigation */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-xl">
         <Link to="/templates" className="bg-white border border-slate-200 rounded-2xl p-lg shadow-sm hover:shadow-md hover:border-primary transition-all group">
           <div className="bg-slate-900 text-white w-10 h-10 rounded-xl flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
             <span className="material-symbols-outlined text-[24px]">medical_services</span>
@@ -57,6 +57,17 @@ const Dashboard = () => {
           <h3 className="font-h3 text-lg mb-1">Pronto Soccorso</h3>
           <p className="text-slate-500 text-xs mb-md">Gestione urgenze, gessi e traumi acuti.</p>
           <div className="text-red-600 font-bold text-[10px] flex items-center gap-1">
+            ESPLORA <span className="material-symbols-outlined text-[12px]">arrow_forward</span>
+          </div>
+        </Link>
+
+        <Link to="/preospedalizzazione" className="bg-white border border-slate-200 rounded-2xl p-lg shadow-sm hover:shadow-md hover:border-amber-500 transition-all group">
+          <div className="bg-amber-500 text-white w-10 h-10 rounded-xl flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+            <span className="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+          </div>
+          <h3 className="font-h3 text-lg mb-1">Preospedalizzazione</h3>
+          <p className="text-slate-500 text-xs mb-md">Cartelle cliniche e consensi pre-ricovero.</p>
+          <div className="text-amber-500 font-bold text-[10px] flex items-center gap-1">
             ESPLORA <span className="material-symbols-outlined text-[12px]">arrow_forward</span>
           </div>
         </Link>
