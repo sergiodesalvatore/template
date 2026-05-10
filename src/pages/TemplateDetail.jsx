@@ -203,20 +203,7 @@ const TemplateDetail = () => {
             </div>
           )}
 
-          {/* Minimal Info */}
-          <div className="bg-white border border-outline-variant rounded-2xl p-md">
-            <h4 className="font-label-caps text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-md border-b pb-2">Metadati</h4>
-            <div className="space-y-4">
-              <div className="flex flex-col">
-                <span className="text-[10px] text-slate-400 uppercase font-bold mb-1">Autore</span>
-                <span className="text-sm font-semibold text-slate-700">{template.author}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] text-slate-400 uppercase font-bold mb-1">Ultima Modifica</span>
-                <span className="text-sm font-semibold text-slate-700">{template.lastUsed}</span>
-              </div>
-            </div>
-          </div>
+          {/* Minimal Info removed as per user request */}
         </div>
       </div>
     </div>

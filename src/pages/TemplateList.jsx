@@ -144,10 +144,7 @@ const TemplateList = ({ filterCategory }) => {
               {template.description}
             </p>
             
-            <div className="flex items-center justify-between pt-md border-t border-outline-variant">
-              <span className="text-[11px] font-data-tabular text-on-tertiary-container uppercase">
-                {template.lastUsed}
-              </span>
+            <div className="flex items-center justify-end pt-md border-t border-outline-variant">
               <Link 
                 to={`/template/${template.id}`} 
                 className="bg-primary text-on-primary px-4 py-1.5 rounded text-label-caps font-bold text-[11px] hover:opacity-90 transition-all"
