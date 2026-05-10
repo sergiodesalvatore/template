@@ -521,11 +521,58 @@ EO: ROM limitato dalla sintomatologia algica, dolente alla palpazione. no defici
 
 Si confeziona steccaggio in sindattilia del IV-V dito, ben tollerato
 Si prescrive:
-- Mantenere l'arto elevato e muovere frequentemente le dita della mano
-- Non bagnare la stecca, non introdurre niente all'interno. 
-- Evitare attività fisica fino a nuova indicazione 
-- Tachipirina la bisogno
-- Controllo in data 26.09.23 alle ore 8.00 in sala gessi per rimozione stecca e controllo clinico (stanza F1)`
+•  Mantenere l'arto elevato e muovere frequentemente le dita della mano
+•  Non bagnare la stecca, non introdurre niente all'interno. 
+•  Evitare attività fisica per 30 giorni 
+•  Tachipirina al bisogno
+•  Rimuovere autonomamente la stecca tra 20 giorni. In caso di problemi dopo 7 giorni recarsi in sala gessi LUN-VEN 8-12 con impegnativa`
+  },
+  {
+    id: 'PS-307-FC',
+    title: 'Frattura Clavicola',
+    category: 'Pronto Soccorso',
+    icon: 'personal_injury',
+    description: 'Posizionamento tutore di clavicola per frattura composta/scomposta.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dott. De Salvatore',
+    uses: 0,
+    isFeatured: false,
+    content: `Viene condotto per trauma dell'arto superiore sn a seguito di caduta dalla bicicletta ieri alle ore 23 circa
+Ha eseguito rx: 
+EO: tumefazione dolente in corrispondenza del sito di frattura. No deficit vn in atto. ROM limitato dalla sintomatologia algica. No esposizione cutanea
+
+Si posiziona tutore di clavicola, ben tollerato, no deficit vn in atto
+
+Si prescrive:
+•  Riposo e astensione dall'attività sportiva fino a nuova indicazione
+•  Tachipirina al bisogno
+•  Mantenere il tutore ben tensionato h24 fino a nuova indicazione
+•  Controllo clinico e radiografico in data 22/09/25 alle ore 9.00 in sala gessi. Rx da prenotare tramite CUP. Si consegnano impegnative`
+  },
+  {
+    id: 'PS-308-OS',
+    title: 'Osgood-Schlatter (PS)',
+    category: 'Pronto Soccorso',
+    icon: 'healing',
+    description: 'Gestione acuta in PS per riacutizzazione di Osgood-Schlatter dopo trauma.',
+    lastUsed: 'Oggi',
+    version: 'v1.0',
+    author: 'Dott. De Salvatore',
+    uses: 0,
+    isFeatured: false,
+    content: `In PS per trauma ginocchio del destro avvenuto in seguito a caduta dalla sua altezza, ieri pomeriggio mentre giocava a pallavolo (Volley Ladispoli)
+
+EO: ginocchio asciutto, stabile in ap e varo-valgo, no deficit di estensione e flessione con rom completo. algia alla palpazione del polo inferiore della rotula. tumefazione lievemente dolente in corrispondenza della tuberosità tibiale (sede di esiti di Osgood-Schlatter)
+
+Si prescrive:
+•  Riposo e astensione dall'attività fisica per 10 giorni
+•  Ghiaccio locale 2 volte al giorno per 10 giorni per 15 minuti
+•  Cetilar pomata locale 2 volte al giorno per 10 giorni
+•  Brufen 400mg 1 cp a stomaco pieno dopo colazione per 10 giorni
+•  Indossare pressore sottorotuleo al ginocchio dx e sx durante l'attività fisica
+•  Stretching del tendine rotuleo e quadricipitale
+•  In caso di persistenza del dolore nonostante la terapia, si consiglia visita ortopedica ambulatoriale portando in visione risonanza magnetica del ginocchio`
   },
   {
     id: 'ORTHO-106-DP',
