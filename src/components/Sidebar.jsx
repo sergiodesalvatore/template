@@ -49,6 +49,15 @@ const Sidebar = () => {
           <span className="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
           <span className="font-sans text-sm font-medium">Recenxio</span>
         </a>
+        <a 
+          href="https://cortesio.vercel.app/dashboard" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+        >
+          <span className="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+          <span className="font-sans text-sm font-medium">Cortesio</span>
+        </a>
       </nav>
       <button 
         onClick={() => alert('Funzione "Nuovo Modello" in fase di implementazione. Sarà presto disponibile un editor completo.')}
